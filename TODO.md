@@ -14,9 +14,9 @@ Project Description
 
 ### In Progress
 
-- [ ] Add tests including one API test  
 
 ### Done ✓
 
 - [x] Add TODO board  
+- [x] Add tests including one API test  
 
