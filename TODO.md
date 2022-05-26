@@ -6,17 +6,18 @@ Project Description
 
 ### Todo
 
-- [ ] Add Projects  
-- [ ] Add Husky hooks  
-- [ ] Add timeline  
-- [ ] Add about me page  
-- [ ] Add tailwind css  
+-   [ ] Add Readme
+-   [ ] Add robots.txt
+-   [ ] Add env variables
+-   [ ] Add Projects
+-   [ ] Add timeline
+-   [ ] Add about me page
 
 ### In Progress
 
-
 ### Done ✓
 
-- [x] Add TODO board  
-- [x] Add tests including one API test  
-
+-   [x] Add TODO board
+-   [x] Add tests including one API test
+-   [x] Add Husky hooks
+-   [x] Add tailwind css
