@@ -6,6 +6,7 @@ Project Description
 
 ### Todo
 
+-   [ ] Add Layout component
 -   [ ] Add Readme
 -   [ ] Add robots.txt
 -   [ ] Add env variables
