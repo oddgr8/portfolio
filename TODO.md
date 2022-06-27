@@ -6,7 +6,6 @@ Project Description
 
 ### Todo
 
--   [ ] Add Layout component
 -   [ ] Add Readme
 -   [ ] Add robots.txt
 -   [ ] Add env variables
@@ -22,3 +21,5 @@ Project Description
 -   [x] Add tests including one API test
 -   [x] Add Husky hooks
 -   [x] Add tailwind css
+-   [x] Add theme change
+-   [x] Add Layout component

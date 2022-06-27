@@ -1,5 +1,4 @@
-import { createMocks, RequestMethod } from 'node-mocks-http'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { createMocks } from 'node-mocks-http'
 import echoHandler, { Data } from '../echo'
 
 describe('Echo API', () => {
