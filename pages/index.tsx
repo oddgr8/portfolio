@@ -7,7 +7,7 @@ function AboutMe() {
             className="hero rounded-lg min-h-[50vh]"
             style={{ backgroundImage: 'url(/bg_me.jpg)' }}
         >
-            <div className="hero-overlay bg-opacity-60 rounded-lg flex flex-col place-content-center place-items-center text-neutral-content text-center">
+            <div className="hero-overlay bg-opacity-60 rounded-lg flex flex-col place-content-center place-items-center text-primary-content text-center">
                 <FadeIn className="max-w-md">
                     <h1 className="m-4 text-5xl font-bold">Onkar Deshpande</h1>
                     <p className="m-2 text-lg">
