@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import FadeIn from 'react-fade-in'
 
 function AboutMe() {
     return (
@@ -7,7 +8,7 @@ function AboutMe() {
             style={{ backgroundImage: 'url(/bg_me.jpg)' }}
         >
             <div className="hero-overlay bg-opacity-60 rounded-lg flex flex-col place-content-center place-items-center text-neutral-content text-center">
-                <div className="max-w-md">
+                <FadeIn className="max-w-md">
                     <h1 className="m-4 text-5xl font-bold">Onkar Deshpande</h1>
                     <p className="m-2 text-lg">
                         Hi, welcome to my corner of the internet!
@@ -22,7 +23,7 @@ function AboutMe() {
                         I{"'"}m always up for interesting conversations,
                         regardless of the topic.
                     </p>
-                </div>
+                </FadeIn>
             </div>
         </div>
     )
