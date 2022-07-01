@@ -109,7 +109,7 @@ function Footer() {
 export default function Layout({ children }: { children: ReactNode }) {
     return (
         <div className="flex h-screen justify-center">
-            <div className="flex flex-col h-screen w-screen max-w-screen-lg">
+            <div className="flex flex-col h-screen w-screen max-w-screen-xl">
                 <Navbar />
                 <main className="flex-1 ">{children}</main>
                 <Footer />
