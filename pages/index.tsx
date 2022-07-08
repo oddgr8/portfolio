@@ -16,11 +16,11 @@ function AboutMe() {
                     <p className="m-2">
                         I{"'"}m a Software engineer passionate about learning
                         new things and trying out new technologies. I{"'"}m
-                        currently into in blockchain and distributed systems.
+                        currently into blockchain and distributed systems.
                     </p>
                     <p className="m-2">
-                        I love reading Physics, Math and a bit of Philosophy and
-                        I{"'"}m always up for interesting conversations,
+                        I love reading Physics, Math and a bit of Philosophy. I
+                        {"'"}m always up for interesting conversations,
                         regardless of the topic.
                     </p>
                 </FadeIn>

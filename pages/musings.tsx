@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
+import FadeIn from 'react-fade-in'
 import musings from '../utils/musings'
+import dayjs from 'dayjs'
 
 const ExternalLink: React.FC<{
     link: string
@@ -9,10 +11,16 @@ const ExternalLink: React.FC<{
 }> = ({ link, content, author, date }) => {
     return (
         <a href={link} target="_blank" rel="noreferrer">
-            <h1>{content}</h1>
-            {author}
-            {JSON.stringify(date)}
-            {/* {date.toISOString()} */}
+            <h1 className="font-bold text-3xl m-3">{content}</h1>
+            <div className="flex flex-row justify-end m-3 mb-0">
+                <h2 className="font-['Edu_TAS_Beginner'] text-2xl ">
+                    <span className="text-sm">
+                        {dayjs(date).format('D MMM YYYY')}
+                    </span>
+                    {'  '}
+                    {author}
+                </h2>
+            </div>
         </a>
     )
 }
@@ -22,20 +30,30 @@ const Quote: React.FC<{
 }> = ({ content, author }) => {
     return (
         <>
-            {author}
-            {content}
+            <h1 className="font-['Tangerine'] text-5xl text-center">
+                {content}
+            </h1>
+            <h2 className="font-['Edu_TAS_Beginner'] text-2xl text-right">
+                {author}
+            </h2>
         </>
     )
 }
 
 const MusingsPage: NextPage = () => {
-    console.log(musings)
     return (
         <div className="flex flex-col items-center ">
-            <div className="flex flex-col w-screen max-w-screen-lg">
+            <div className="flex-auto min-h-[10vh]" />
+            <FadeIn className="flex flex-col w-screen max-w-screen-lg">
+                <div key={0}>
+                    <div className="m-5 text-8xl text-center font-['Tangerine']">
+                        Behold... My Stuff!
+                    </div>
+                </div>
                 {musings.map((musing, idx) => (
                     <div key={idx}>
-                        <div className="m-7">
+                        <div className="divider" />
+                        <div className="m-7 mb-0">
                             {musing.link ? (
                                 <ExternalLink
                                     link={musing.link}
@@ -50,11 +68,9 @@ const MusingsPage: NextPage = () => {
                                 />
                             )}
                         </div>
-                        <div className="divider" />
                     </div>
                 ))}
-                <h3 className="text-center">Thank you for reading!</h3>
-            </div>
+            </FadeIn>
         </div>
     )
 }
