@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import FadeIn from 'react-fade-in'
 import skills from '../utils/skills'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState } from 'react'
 
 function AboutMe() {
     return (
@@ -32,16 +33,43 @@ function AboutMe() {
 }
 
 function Skills() {
+    const [skill, setSkill] = useState('')
     return (
-        <>
-            <h1 className="m-7 text-2xl">Some stuff I am good at</h1>
-            <div className="min-w-full grid grid-flow-row-dense grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 place-items-center">
-                {skills.map((ele, idx) => (
-                    <FontAwesomeIcon icon={ele.icon} key={idx} />
-                ))}
+        <FadeIn>
+            <div className="flex flex-col pt-5 text-center">
+                <h1 className="flex-none h-10 text-2xl">
+                    I am really good at using
+                </h1>
+                <h1 className="flex-none h-10 text-2xl">{skill}</h1>
             </div>
-        </>
+            <ul className="text-center list-none px-2 max-w-3xl">
+                {skills.map((ele, idx) => (
+                    <li
+                        key={idx}
+                        className="inline-block p-3 hover:scale-125 ease-in duration-100 hover:text-primary"
+                        onMouseEnter={() => {
+                            setSkill(ele.tooltip)
+                        }}
+                        onMouseLeave={() => {
+                            setSkill('')
+                        }}
+                    >
+                        <a href={ele.link} target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={ele.icon} size="3x" />
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </FadeIn>
     )
+}
+
+function Projects() {
+    return <></>
+}
+
+function Timeline() {
+    return <></>
 }
 
 const Home: NextPage = () => {
@@ -49,6 +77,8 @@ const Home: NextPage = () => {
         <div className="flex flex-col items-center">
             <AboutMe />
             <Skills />
+            <Projects />
+            <Timeline />
         </div>
     )
 }
