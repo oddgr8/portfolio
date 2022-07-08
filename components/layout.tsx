@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
-import { Scrollbars } from 'rc-scrollbars'
 
 function useTheme(): [string, () => void] {
     const [theme, setTheme] = useState('light')
@@ -112,9 +111,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="flex h-screen justify-center">
             <div className="flex flex-col h-screen w-screen max-w-screen-xl">
                 <Navbar />
-                <main className="flex-1 ">
-                    <Scrollbars>{children}</Scrollbars>
-                </main>
+                <main className="flex-1">{children}</main>
                 <Footer />
             </div>
         </div>

@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import FadeIn from 'react-fade-in'
+import skills from '../utils/skills'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function AboutMe() {
     return (
@@ -29,10 +31,24 @@ function AboutMe() {
     )
 }
 
+function Skills() {
+    return (
+        <>
+            <h1 className="m-7 text-2xl">Some stuff I am good at</h1>
+            <div className="min-w-full grid grid-flow-row-dense grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 place-items-center">
+                {skills.map((ele, idx) => (
+                    <FontAwesomeIcon icon={ele.icon} key={idx} />
+                ))}
+            </div>
+        </>
+    )
+}
+
 const Home: NextPage = () => {
     return (
         <div className="flex flex-col items-center">
             <AboutMe />
+            <Skills />
         </div>
     )
 }
