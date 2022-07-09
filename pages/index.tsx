@@ -96,20 +96,19 @@ function Timeline() {
             <h1 className="h-10 text-2xl mt-1">{timelineEle.duration}</h1>
             <div className=" mt-10 w-[100%] rounded-xl bg-base-300 grid grid-cols-1 md:grid-cols-2 min-h-[24rem] ">
                 {timelineEle.image ? (
-                    <div className="m-10">
+                    <div className="m-10 flex flex-row justify-center">
                         <Image
                             src={timelineEle.image}
                             alt={timelineEle.title}
                             width={350}
                             height={350}
-                            layout="responsive"
                         />
                     </div>
                 ) : null}
                 <div className="m-5">
                     <h1 className="text-3xl my-5">{timelineEle.title}</h1>
                     {timelineEle.content.map((ele, idx) => (
-                        <p key={idx} className="my-2">
+                        <p key={idx} className="my-2 mr-10">
                             {ele}
                         </p>
                     ))}
