@@ -51,7 +51,7 @@ function ThemeToggle() {
 
 function Navbar() {
     return (
-        <nav className="navbar bg-primary text-primary-content rounded-b-xl">
+        <nav className="navbar bg-primary text-primary-content xl:rounded-b-xl">
             <div className="navbar-start">
                 <Link href="/">
                     <button className="btn btn-ghost">Home</button>
@@ -68,7 +68,7 @@ function Navbar() {
 }
 function Footer() {
     return (
-        <footer className="footer footer-center md:footer md:justify-between gap-4 bg-neutral text-neutral-content rounded-t-xl p-4">
+        <footer className="footer footer-center md:footer md:justify-between gap-4 bg-neutral text-neutral-content xl:rounded-t-xl p-4">
             <div className="grid-flow-col footer-title m-0">
                 Onkar Deshpande
             </div>

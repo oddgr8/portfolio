@@ -9,10 +9,10 @@ import Image from 'next/image'
 function AboutMe() {
     return (
         <div
-            className="hero rounded-xl min-h-[50vh]"
+            className="hero xl:rounded-xl min-h-[50vh]"
             style={{ backgroundImage: 'url(/bg_me.jpg)' }}
         >
-            <div className="hero-overlay bg-opacity-60 rounded-xl flex flex-col place-content-center place-items-center text-primary-content text-center">
+            <div className="hero-overlay bg-opacity-60 xl:rounded-xl flex flex-col place-content-center place-items-center text-primary-content text-center">
                 <FadeIn className="max-w-md">
                     <h1 className="m-4 text-5xl font-bold">Onkar Deshpande</h1>
                     <p className="m-2 text-lg">
@@ -94,7 +94,7 @@ function Timeline() {
                 </div>
             </div>
             <h1 className="h-10 text-2xl mt-1">{timelineEle.duration}</h1>
-            <div className=" mt-10 w-[100%] rounded-xl bg-base-300 grid grid-cols-1 md:grid-cols-2 min-h-[24rem] ">
+            <div className=" mt-10 w-[100%] xl:rounded-xl bg-base-300 grid grid-cols-1 md:grid-cols-2 min-h-[24rem] ">
                 {timelineEle.image ? (
                     <div className="m-10 flex flex-row justify-center">
                         <Image
