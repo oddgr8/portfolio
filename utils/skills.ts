@@ -123,7 +123,7 @@ const skills: Skill[] = [
     {
         icon: faHouseSignal,
         link: 'https://en.wikipedia.org/wiki/Internet_of_things',
-        tooltip: 'IoT',
+        tooltip: 'Internet of Things',
     },
     {
         icon: faRaspberryPi,
