@@ -7,7 +7,7 @@ import Link from 'next/link'
 function useTheme(): [string, () => void] {
     const [theme, setTheme] = useState('light')
     useEffect(() => {
-        const theme = localStorage.getItem('theme')
+        const theme = localStorage.getItem('od-portfolio-theme')
         if (theme) {
             setTheme(theme)
             document.documentElement.setAttribute('data-theme', theme)
@@ -51,13 +51,18 @@ function ThemeToggle() {
 
 function Navbar() {
     return (
-        <nav className="navbar bg-primary text-primary-content xl:rounded-b-xl">
+        <nav className="navbar bg-primary text-primary-content ">
             <div className="navbar-start">
                 <Link href="/">
                     <button className="btn btn-ghost">Home</button>
                 </Link>
                 <Link href="/musings">
                     <button className="btn btn-ghost">Musings</button>
+                </Link>
+                <Link href={'/CV.pdf'} passHref>
+                    <a target="_blank" className="btn btn-ghost">
+                        Resume
+                    </a>
                 </Link>
             </div>
             <div className="navbar-end">
@@ -68,7 +73,7 @@ function Navbar() {
 }
 function Footer() {
     return (
-        <footer className="footer footer-center md:footer md:justify-between gap-4 bg-neutral text-neutral-content xl:rounded-t-xl p-4">
+        <footer className="footer footer-center md:footer md:justify-between gap-4 bg-neutral text-neutral-content p-4">
             <div className="grid-flow-col footer-title m-0">
                 Onkar Deshpande
             </div>

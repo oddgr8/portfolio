@@ -9,12 +9,12 @@ interface TimelineElement {
 const timeline: TimelineElement[] = [
     {
         tab: 'IIT Bombay',
-        duration: 'from 2017 to 2021',
+        duration: '2017 - 2021',
         title: 'IIT Bombay, CSE B. Tech',
         image: '/iitb.png',
         content: [
             'An All India Rank of 8 in JEE Advanced got me into one of the most premiere institutes of the country. I eventually graduated with a CPI of 9.78.',
-            'I worked on the formal verification of parameterized k-CAS programs. These are programs that havea access to atomic Compare-And-Swap intructions.',
+            'I worked on the formal verification of parameterized k-CAS programs. These are programs that have access to atomic Compare-And-Swap intructions.',
             'My bachelor thesis was about creating a compiler for writing secure multi-party computation protocols at a high level.',
             'I worked on projects dealing with various fields like Machine Learning, Computer Vision, Compilers, etc.',
             'I was also an Institute student mentor, a Department mentor, a TA and winner of Institute Academic Prize.',
@@ -22,7 +22,7 @@ const timeline: TimelineElement[] = [
     },
     {
         tab: 'TU Braunschweig',
-        duration: 'during Summer 2019',
+        duration: 'Summer 2019',
         title: 'Technische Universität Braunschweig',
         image: '/tub.png',
         content: [
@@ -32,7 +32,7 @@ const timeline: TimelineElement[] = [
     },
     {
         tab: 'Rubrik',
-        duration: 'since 2021',
+        duration: '2021 - Present',
         title: 'Rubrik India',
         image: '/rubrik.png',
         content: [

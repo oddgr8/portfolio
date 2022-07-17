@@ -9,21 +9,28 @@ import Image from 'next/image'
 function AboutMe() {
     return (
         <div
-            className="hero xl:rounded-xl min-h-[50vh]"
-            style={{ backgroundImage: 'url(/bg_me.jpg)' }}
+            className="hero min-h-[50vh]"
+            style={{
+                backgroundImage: 'url(/bg_me.jpg)',
+                backgroundPositionX: '72%',
+                backgroundPositionY: '10%',
+            }}
         >
-            <div className="hero-overlay bg-opacity-60 xl:rounded-xl flex flex-col place-content-center place-items-center text-primary-content text-center">
-                <FadeIn className="max-w-md">
-                    <h1 className="m-4 text-5xl font-bold">Onkar Deshpande</h1>
-                    <p className="m-2 text-lg">
+            <div className="hero-overlay bg-opacity-60 flex flex-col justify-center ali place-items-center text-primary-content text-left md:text-center">
+                <FadeIn className="max-w-xl">
+                    <h1 className="m-4 text-5xl md:text-6xl lg:text-7xl font-bold">
+                        Onkar
+                        <br /> Deshpande
+                    </h1>
+                    <p className="m-2 mx-4 text-lg md:text-xl lg:text-2xl">
                         Hi, welcome to my corner of the internet!
                     </p>
-                    <p className="m-2">
+                    <p className="m-2 mx-4 md:text-lg">
                         I{"'"}m a Software engineer passionate about learning
                         new things and trying out new technologies. I{"'"}m
                         currently into blockchain and distributed systems.
                     </p>
-                    <p className="m-2">
+                    <p className="m-2 mx-4 md:text-lg">
                         I love reading Physics, Math and a bit of Philosophy. I
                         {"'"}m always up for interesting conversations,
                         regardless of the topic.
@@ -39,9 +46,7 @@ function Skills() {
     return (
         <FadeIn className="mt-5 max-w-3xl">
             <div className="flex flex-col pt-5 text-center">
-                <h1 className="flex-none h-10 text-2xl">
-                    I am really good at using
-                </h1>
+                <h1 className="flex-none h-10 text-2xl">I am good at</h1>
                 <h1 className="flex-none h-10 text-2xl">{skill}</h1>
             </div>
             <ul className="text-center list-none">
@@ -93,8 +98,7 @@ function Timeline() {
                     </div>
                 </div>
             </div>
-            <h1 className="h-10 text-2xl mt-1">{timelineEle.duration}</h1>
-            <div className=" mt-10 w-[100%] xl:rounded-xl bg-base-300 grid grid-cols-1 md:grid-cols-2 min-h-[24rem] ">
+            <div className=" mt-2 w-[100%] bg-base-300 grid grid-cols-1 md:grid-cols-2 min-h-[24rem] ">
                 {timelineEle.image ? (
                     <div className="m-10 flex flex-row justify-center">
                         <Image
@@ -106,7 +110,8 @@ function Timeline() {
                     </div>
                 ) : null}
                 <div className="m-5">
-                    <h1 className="text-3xl my-5">{timelineEle.title}</h1>
+                    <h1 className="text-3xl mt-5">{timelineEle.title}</h1>
+                    <h2 className="text-xl mb-5">{timelineEle.duration}</h2>
                     {timelineEle.content.map((ele, idx) => (
                         <p key={idx} className="my-2 mr-10">
                             {ele}

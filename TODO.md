@@ -9,9 +9,6 @@ Project Description
 -   [ ] Add Readme
 -   [ ] Add robots.txt
 -   [ ] Add env variables
--   [ ] Add Projects
--   [ ] Add timeline
--   [ ] Add about me page
 
 ### In Progress
 
@@ -23,3 +20,6 @@ Project Description
 -   [x] Add tailwind css
 -   [x] Add theme change
 -   [x] Add Layout component
+-   [x] Add Projects
+-   [x] Add timeline
+-   [x] Add about me page
