@@ -7,6 +7,12 @@ interface Musing {
 
 const musings: Musing[] = [
     {
+        date: '2022-07-21',
+        link: 'https://youtu.be/ovJcsL7vyrk',
+        content: 'This equation will change how you see the world',
+        author: 'Veritasium',
+    },
+    {
         date: '2020-02-22',
         link: 'https://youtu.be/1ZM-jnXh4uw',
         content: 'Is Thor: Ragnarok the best Marvel movie ever?',
