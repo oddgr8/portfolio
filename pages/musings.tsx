@@ -11,7 +11,9 @@ const ExternalLink: React.FC<{
 }> = ({ link, content, author, date }) => {
     return (
         <a href={link} target="_blank" rel="noreferrer">
-            <h1 className="font-bold text-3xl m-3">{content}</h1>
+            <h1 className="font-bold text-3xl m-3 font-['Cormorant_SC']">
+                {content}
+            </h1>
             <div className="flex flex-row justify-end m-3 mb-0">
                 <h2 className="font-['Edu_TAS_Beginner'] text-2xl ">
                     <span className="text-sm">
@@ -46,8 +48,8 @@ const MusingsPage: NextPage = () => {
             <div className="flex-auto min-h-[10vh]" />
             <FadeIn className="flex flex-col w-screen max-w-screen-lg">
                 <div key={0}>
-                    <div className="m-5 text-8xl text-center font-['Tangerine']">
-                        Behold... My Stuff!
+                    <div className="m-5 text-5xl text-center font-['Tangerine']">
+                        Some things worth sharing
                     </div>
                 </div>
                 {musings.map((musing, idx) => (
