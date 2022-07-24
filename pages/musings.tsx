@@ -46,15 +46,11 @@ const MusingsPage: NextPage = () => {
     return (
         <div className="flex flex-col items-center ">
             <div className="flex-auto min-h-[10vh]" />
-            <FadeIn className="flex flex-col w-screen max-w-screen-lg">
-                <div key={0}>
-                    <div className="m-5 text-5xl text-center font-['Tangerine']">
-                        Some things worth sharing
-                    </div>
-                </div>
+            <FadeIn className="flex flex-col w-screen max-w-screen-lg my-5">
                 {musings.map((musing, idx) => (
                     <div key={idx}>
-                        <div className="divider" />
+                        {idx == 0 ? null : <div className="divider" />}
+
                         <div className="m-7 mb-0">
                             {musing.link ? (
                                 <ExternalLink

@@ -114,7 +114,7 @@ function Footer() {
 
 export default function Layout({ children }: { children: ReactNode }) {
     return (
-        <div className="flex h-screen justify-center">
+        <div className="flex h-screen justify-center overflow-y-auto overflow-x-clip scrollbar-hide">
             <div className="flex flex-col h-screen w-screen max-w-screen-xl">
                 <Navbar />
                 <main className="flex-1">{children}</main>
